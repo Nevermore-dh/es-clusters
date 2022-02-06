@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  dsl_kibana:
+    image: kibana:7.13.4
+    container_name: dsl_kibana
+    volumes:
+      - ./kibana.yml:/usr/share/kibana/config/kibana.yml

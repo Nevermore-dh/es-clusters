@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  cfg_c2_es_node1:
+    image: elasticsearch:7.13.4
+    container_name: cfg_c2_es_node1
+    environment:
+      - ES_JAVA_OPTS=-Xms256m -Xmx256m
+    ports:
+      - "9528:9528"
+      - "9928:9928"
+    volumes:
+      - /Users/van/WorkSpace/ECE/EsCluster/CFG_C2/es_node1/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - /Users/van/WorkSpace/ECE/EsCluster/CFG_C2/es_node1/data:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+networks:
+  elastic:
+    driver: bridge

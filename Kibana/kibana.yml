@@ -1,0 +1,8 @@
+server.port: 5601
+server.host: "127.0.0.1"
+server.name: "kibana"
+elasticsearch.hosts: ["http://192.168.8.201:9200"]
+# elasticsearch.hosts: ["http://192.168.8.201:9200","http://192.168.8.181:9200","http://192.168.8.182:9200","http://192.168.8.183:9200"]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+# elasticsearch.username: "elastic"
+# elasticsearch.password: "123456"

@@ -1,0 +1,17 @@
+cluster.name: cfg-c2-es-cluster  # 集群唯一名称，所有节点一致
+node.roles: [data, master]
+node.name: es-node1                     # 节点名称
+# network.host: 192.168.8.113
+http.port: 9528 # 设置对外服务的http端口，默认为9200
+transport.tcp.port: 9928           #设置节点之间交互的tcp端口，默认是9300
+cluster.initial_master_nodes: ["es-node1"]
+
+network.bind_host: 0.0.0.0              #设置可以访问的ip,默认为0.0.0.0，这里全部设置通过
+# network.publish_host: 192.168.2.2       #设置其它结点和该结点交互的ip地址            
+# http.cors.enabled: true
+# http.cors.allow-origin: "*"
+# node.master: true           #配置该结点是否有资格被选举为主结点（候选主结点），为了防止脑裂，配置奇数个候选主结点
+# node.data: true              #配置该结点是数据结点，用于保
+# discovery.zen.ping.unicast.hosts: ["192.168.2.2:9300","192.168.2.2:9301","192.168.2.2:9302"] #集群个节点IP地址
+# discovery.zen.minimum_master_nodes: 2  #自动发现master节点的最小数
+# indices.query.bool.max_clause_count: 10240
